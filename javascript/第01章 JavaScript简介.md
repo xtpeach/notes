@@ -23,9 +23,26 @@ JavaScript从一个简单的输入验证器发展成为一门强大的编程语�
 
 ## 1.2 JavaScript实现
 
-虽然JavaScript和ECMAScript通常都被人们用来表达相同的含义，但JavaScript的含义却比ECMA-262中规定的要多得多。没错，一个完整的JavaScript实现应该由下列三个不同的部分组成。
-·核心（ECMAScript）
-·文档对象模型（DOM）
-·浏览器对象模型（BOM）
+虽然JavaScript和ECMAScript通常都被人们用来表达相同的含义，但JavaScript的含义却比ECMA-262中规定的要多得多。没错，一个完整的JavaScript实现应该由下列三个不同的部分组成。（ECMAScript、DOM、BOM）
+1. 核心（ECMAScript）
+2. 文档对象模型（DOM）
+3. 浏览器对象模型（BOM）
 
 ### 1.2.1 ECMAScript
+
+由ECMA-262定义的ECMAScript与Web浏览器没有依赖关系。实际上，这门语言本身并不包含输入和输出定义。ECMA-262定义的只是这门语言的基础，而在此基础之上可以构建更完善的脚本语言。我们常见的Web浏览器只是ECMAScript实现可能的宿主环境之一。宿主环境不仅提供基本的ECMAScript实现，同时也提供该语言的扩展，以便语言与环境之间对接交互。而这些扩展——如DOM，则利用ECMAScript的核心类型和语法提供更多具体的功能，以便实现针对环境的操作。其他宿主环境包括Node（一种服务端JavaScript平台）和Adobe Flash。
+
+既然ECMA-262标准没有参照Web浏览器，那它规定了些什么内容呢？大致说来，它规定了这门语言的下列组成部分：
+1. 语法
+2. 类型
+3. 语句
+4. 关键字
+5. 保留字
+6. 操作符
+7. 对象
+
+ECMAScript就是对实现该标准规定的各个方面内容的语言的描述。JavaScript实现了ECMAScript，Adobe ActionScript同样也实现了ECMAScript。
+
+#### 1.ECMAScript的版本
+
+ECMAScript的不同版本又称为版次，以第x版表示（意即描述特定实现的ECMA-262规范的第x个版本）。ECMA-262的最近一版是第5版，发布于2009年。而ECMA-262的第1版本质上与Netscape的JavaScript1.1相同——只不过删除了所有针对浏览器的代码并作了一些较小的改动：ECMA-262
