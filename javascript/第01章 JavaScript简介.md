@@ -13,8 +13,26 @@ JavaScript从一个简单的输入验证器发展成为一门强大的编程语�
     
 当时就职于Netscape公司的布兰登·艾奇（Brendan Eich），开始着手为计划于1995年2月发布的Netscape Navigator2开发一种名为LiveScript的脚本语言——该语言将同时在浏览器和服务器中使用（它在服务器上的名字叫LiveWire）。为了赶在发布日期前完成LiveScript的开发，Netscape与Sun公司建立了一个开发联盟。在Netscape Navigator2正式发布前夕，Netscape为了搭上媒体热炒Java的顺风车，临时把LiveScript改名为JavaScript。
     
-由于JavaScript1.0获得了巨大成功，Netscape随即在Netscape Navigator3中又发布了JavaScript1.1。
+由于JavaScript1.0获得了巨大成功，Netscape随即在Netscape Navigator3中又发布了JavaScript1.1。Web虽然羽翼未丰，但用户关注度却屡创新高。在这样的背景下，Netscape把自己定位为市场领袖型 公司。与此同时，微软决定向与Navigator竞争的自家产品Internet Explorer浏览器投入更多资源。Netscape Navigator3发布后不久，微软就在其Internet Explorer3中加入了名为JScript的JavaScript实现（命名为JScript是为了避开与Netscape有关的授权问题）。以现在的眼光看，微软在1996年8月为进入Web浏览器领域而实施的这个重大举措，是导致Netscape日后蒙羞的一个标志性事件。然而，这个重大举措同时也标志着JavaScript作为一门语言，其开发向前买进了一大步。
+
+微软推出其JavaScript实现意味着有了两个不同的JavaScript版本：Netscape Navigator中的JavaScript、Internet Explorer中的JScript。与C及其他编程语言不同，当时还没有标准规定JavaScript的语法和特性，两个不同版本并存的局面已经完全暴露了这个问题。随着业界担心的日益加剧，JavaScript的标准化问题被提上议事日程。
+
+1997年，以JavaScript1.1为蓝本的建议被提交给了欧洲计算机制造商协会（ECMA，European Computer Manufacturers Association）。该协会指定39号技术委员会（TC39，Technical Committee #39）负责“标准化一种通用、跨平台、供应商中立的脚本语言的语法和语义”（http://www.ecmainternational.org/memento/TC39.htm）。TC39由来自Netscape、Sun、微软、Borland及其他关注脚本语言发展的公司的程序员组成，他们经过数月的努力完成了ECMA-262——定义一种名为ECMAScript（发音为“ek-ma-script”）的新脚本语言的标准。
+
+第二年，ISO/IEC（International Organization for Standardization and International Electrotechnical Commission，国标标准化组织和国际电工委员会）也采用了ECMAScript作为标准（即ISO/IEC-16262）。自此以后，浏览器开发商就开始致力于将ECMAScript作为各自JavaScript实现的基础，也在不同程度上取得了成功。
 
 ## 1.2 JavaScript实现
+
+虽然JavaScript和ECMAScript通常都被人们用来表达相同的含义，但JavaScript的含义却比ECMA-262中规定的要多得多。没错，一个完整的JavaScript实现应该由下列三个不同的部分组成。
+·核心（ECMAScript）
+·文档对象模型（DOM）
+·浏览器对象模型（BOM）
+----------------------------------
+|             JavaScript         |
+|                                |
+| -------------- ------- ------- |
+| | ECMAScript | | DOM | | BOM | |
+| -------------- ------- ------- |
+----------------------------------
 
 ### 1.2.1 ECMAScript
