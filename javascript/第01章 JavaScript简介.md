@@ -52,3 +52,51 @@ ECMA-262第2版主要是编辑加工的结果。这一版中内容的更新是�
 ECMA-262第3版才是对该标准第一次真正的修改。修改的内容涉及字符串处理、错误定义和数值输出。这一版还新增了对正则表达式、新控制语句、try-catch异常处理的支持，并围绕标准的国际化做出了一些小的修改。从各方面综合来看，第3版标志着ECMAScript成为了一门真正的变成语言。
 
 ECMA-262第4版对这门语言进行了一次全面的检核修订。由于JavaScript在Web上日益流行，开发人员纷纷建议修订ECMAScript，以使其能够满足不断增长的Web开发需求。作为回应，ECMA TC39重新召集相关人员共同谋划这门语言的未来。结果，出台后的标准几乎在第3版基础上完全定义了一门新语言。第4版不仅包含了强类型变量、新语句和新数据结构、真正的类和经典继承，还定义了与数据交互的新方式。
+
+与此同时，TC39下属的一个小组也提出了一个名为ECMAScript3.1的替代性建议，该建议只对这门语言进行较少的改进。这个小组认为第4版给这门语言带来的跨越太大了。因此，该小组建议对这门语言进行小幅修改，能够在现有JavaScript引擎基础上实现。最终，ES3.1附属委员会获得的支持超过了TC39，ECMA-262第4版在证书发布前被放弃。
+
+ECMAScript3.1称为ECMA-262第5版，并于2009年12月3日正式发布。第5版力求澄清第3版本中已知的歧义并添加了新的功能。新功能包括原生JSON对象（用于解析和序列化JSON数据）、继承的方法和高级属性定义，另外还包含一种严格模式，对ECMAScript引擎解释和执行代码进行了补充说明。
+
+#### 2.什么是ECMAScript兼容
+
+ECMA-262给出了ECMAScript兼容的定义。要想称为ECMAScript的实现，则该实现必须做到：
+1. 支持ECMA-262描述的所有“类型、值、对象、属性、函数以及程序句法和语义”；
+2. 支持Unicode字符标准；
+3. 添加ECMA-262没有描述的“更多类型、值、对象、属性和函数”。ECMA-262所说的这些新增特性，主要是指标准中没有规定的新对象和对象的新属性。
+4. 支持ECMA-262没有定义的“程序和正则表达式语法”。（也就是说，可以修改和扩展内置的正则表达式语法。）
+
+上述要求为兼容实现的开发人员基于ECMAScript开发一门新语言提供了广阔的空间和极大的灵活性，这也从另一个侧面说明了ECMAScript受开发人员欢迎的原因。
+
+#### 3.Web浏览器对ECMAScript的支持
+
+1996年，Netscape Navigator3捆绑发布了JavaScript1.1。而相同的JavaScript1.1设计规范随后作为对新标准（ECMA-262）的建议被提交给Ecma。伴随着JavaScript的迅速走红，Netscape豪情满怀地着手开发JavaScript1.2。然而，问题是Ecma当时还没有接受Netscape的建议。
+
+Netscape Navigator3发布后不久，微软也推出了Internet Explorer3。微软在IE的这一版中捆绑了JScript1.0，很多人都认为JScript1.0与JavaScript1.1应该是一样的。但是，由于没有文档依据，加之不适当的特性模仿，JScript1.0还是很难与JavaScript1.1相提并论。
+
+1997年，内置JavaScript1.2的Netscape Navigator4发布；而到这一年年底，ECMA-262第1版也被接受并实现了标准化。结果，虽然ECMAScript被认为是基于JavaScript1.1制定的，但JavaScript1.2与ECMAScript的第1版并不兼容。
+
+JScript的升级版是Internet Explorer4中内置的JScript3.0（随同微软IIS3.0发布的JScript2.0从来也没有移植到浏览器中）。微软通过媒体大肆宣传JScript3.0是世界上第一个ECMA兼容的脚本语言，但当时的ECMA-262尚未定稿。于是，JScript3.0与JavaScript1.2都遭遇了相同的尴尬局面——谁都没有按照最终的ECMAScript标准来实现。
+
+Netscape决定要更新其JavaScript实现，即在Netscape Navigator4.06中发布JavaScript1.3，从而做到了与ECMA-262的第一个版本完全兼容。在JavaScript1.3中，Netscape增加了对Unicode标准的支持，并在保留JavaScript1.2新增特性的同时实现了所有对象的平台中立化。
+
+在Netscape以Mozilla项目的名义开放其源代码时，预期JavaScript1.4将随同Netscape Navigator5一道发布。然而，一个激进的决定，彻底重新设计Netscape代码，打乱了原有计划。后来，JavaScript1.4只发布了针对Netscape Enterprise Server的服务器版，而没有内置于Web浏览器中。
+
+到了2008年，五大主流Web浏览器（IE、Firefox、Safari、Chrome和Opera）全部做到了与ECMA-262兼容。IE8是第一个着手实现ECMA-262第5版的浏览器，并在IE9中提供了完整的支持。Firefox4也紧随其后做到兼容。下表列出了ECMAScript受主流Web浏览器支持的情况。
+
+### 1.2.2 文档对象模型（DOM）
+
+文档对象模型（DOM，Document Object Model）是针对XML但经过扩展用于HTML的应用程序编程接口（API，Application Programming Interface）。DOM 把整个页面映射为一个多层节点结构。HTML 或 XML页面中的每个组成部分都是某种类型的节点，这些节点又包含着不同类型的数据。看下面这个HTML页面：
+
+```html
+    <html>
+        <head>
+            <title>Sample Page</title>
+        </head>
+        <body>
+            <p>Hello World!</p>
+        </body>
+    </html>
+```
+在浏览器开发者调试工具中，我们可以清楚看到其分层节点结构。
+
+通过DOM创建的这个表示文档的树形图
