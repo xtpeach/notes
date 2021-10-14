@@ -119,3 +119,5 @@ BOM, Browser Object Model。
 7. 像XMLHttpRequest和IE的ActiveXObject这样的自定义对象。
 
 由于没有BOM标准可以遵循，因此每个浏览器都有自己的实现。虽然也存在一些事实标准，例如要有window对象和navigator对象等，但每个浏览器都会为这两个对象乃至其他对象定义自己的属性和方法。现在有了HTML5，BOM实现的细节有望朝着兼容性越来越高的方向发展。
+
+### 1.3 JavaScript版本
