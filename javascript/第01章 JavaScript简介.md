@@ -122,4 +122,28 @@ BOM, Browser Object Model。
 
 ### 1.3 JavaScript版本
 
+作为Netscape“继承人”的Mozilla公司，是目前唯一还在沿用最初的JavaScript版本编号序列的浏览器开发商。
 
+在Netscape将源代码提交给开源的Mozilla项目的时候，JavaScript在浏览器中的最后一个版本号是1.3。
+
+1.4版本只针对服务器的实现。
+
+后来，随着Mozilla基金会继续开发JavaScript，添加新的特性、关键字和语法，JavaScript的版本号继续递增。
+
+>Netscape Navigator 2 -> 1.0  
+>Netscape Navigator 3 -> 1.1  
+>Netscape Navigator 4 -> 1.2  
+>Netscape Navigator 4.06 -> 1.3  
+>Netscape 6+(Mozilla 0.6.0) -> 1.5  
+>Firefox 1 -> 1.5  
+>Firefox 1.5 -> 1.6  
+>Firefox 2 -> 1.7  
+>Firefox 3 -> 1.8  
+>Firefox 3.5 -> 1.8.1  
+>Firefox 3.6 -> 1.8.2  
+
+目前，JavaScript 2.0还没有目标实现。
+
+请注意，只有Netscape/Mozilla浏览器才遵循这种编号模式。
+
+大多数浏览器在提及对JavaScript的支持情况时，一般都以ECMAScript兼容性和对DOM的支持情况为准。
