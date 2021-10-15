@@ -43,7 +43,7 @@ JavaScript从一个简单的输入验证器发展成为一门强大的编程语�
 
 ECMAScript就是对实现该标准规定的各个方面内容的语言的描述。JavaScript实现了ECMAScript，Adobe ActionScript同样也实现了ECMAScript。
 
-#### 1.ECMAScript的版本
+##### 1.ECMAScript的版本
 
 ECMAScript的不同版本又称为版次，以第x版表示（意即描述特定实现的ECMA-262规范的第x个版本）。ECMA-262的最近一版是第5版，发布于2009年。而ECMA-262的第1版本质上与Netscape的JavaScript1.1相同——只不过删除了所有针对浏览器的代码并作了一些较小的改动：ECMA-262要求支持Unicode标准（从而支持多语言开发），而且对象也变成了平台无关的（Netscape JavaScript1.1的对象在不同平台中的实现不一样，例如Date对象）。这也是JavaScript1.1和1.2与ECMA-262第1版不一致的主要原因。
 
@@ -57,7 +57,7 @@ ECMA-262第4版对这门语言进行了一次全面的检核修订。由于JavaS
 
 ECMAScript3.1称为ECMA-262第5版，并于2009年12月3日正式发布。第5版力求澄清第3版本中已知的歧义并添加了新的功能。新功能包括原生JSON对象（用于解析和序列化JSON数据）、继承的方法和高级属性定义，另外还包含一种严格模式，对ECMAScript引擎解释和执行代码进行了补充说明。
 
-#### 2.什么是ECMAScript兼容
+##### 2.什么是ECMAScript兼容
 
 ECMA-262给出了ECMAScript兼容的定义。要想称为ECMAScript的实现，则该实现必须做到：
 1. 支持ECMA-262描述的所有“类型、值、对象、属性、函数以及程序句法和语义”；
@@ -67,7 +67,7 @@ ECMA-262给出了ECMAScript兼容的定义。要想称为ECMAScript的实现，�
 
 上述要求为兼容实现的开发人员基于ECMAScript开发一门新语言提供了广阔的空间和极大的灵活性，这也从另一个侧面说明了ECMAScript受开发人员欢迎的原因。
 
-#### 3.Web浏览器对ECMAScript的支持
+##### 3.Web浏览器对ECMAScript的支持
 
 1996年，Netscape Navigator3捆绑发布了JavaScript1.1。而相同的JavaScript1.1设计规范随后作为对新标准（ECMA-262）的建议被提交给Ecma。伴随着JavaScript的迅速走红，Netscape豪情满怀地着手开发JavaScript1.2。然而，问题是Ecma当时还没有接受Netscape的建议。
 
@@ -120,7 +120,7 @@ BOM, Browser Object Model。
 
 由于没有BOM标准可以遵循，因此每个浏览器都有自己的实现。虽然也存在一些事实标准，例如要有window对象和navigator对象等，但每个浏览器都会为这两个对象乃至其他对象定义自己的属性和方法。现在有了HTML5，BOM实现的细节有望朝着兼容性越来越高的方向发展。
 
-### 1.3 JavaScript版本
+## 1.3 JavaScript版本
 
 作为Netscape“继承人”的Mozilla公司，是目前唯一还在沿用最初的JavaScript版本编号序列的浏览器开发商。
 
@@ -147,3 +147,11 @@ BOM, Browser Object Model。
 请注意，只有Netscape/Mozilla浏览器才遵循这种编号模式。
 
 大多数浏览器在提及对JavaScript的支持情况时，一般都以ECMAScript兼容性和对DOM的支持情况为准。
+
+## 1.4 小结
+
+JavaScript是一种专为网页交互而设计的脚本语言，由下列三个不同的部分组成：
+
+>ECMAScript，由ECMA-262定义，提供核心语言功能；
+>文档对象模型（DOM），提供访问和操作网页内容的方法和接口；
+>浏览器对象模型（BOM），提供与浏览器交互的方法和接口。
