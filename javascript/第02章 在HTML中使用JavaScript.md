@@ -93,7 +93,7 @@
         <!-- 这里放内容 -->
     </body>
 </html>
-```html
+```
 
 这种做法的目的就是把所有外部文件（包括CSS文件和JavaScript文件）的引用都放在相同的地方。可是，在文档的<head>元素中包含所有JavaScript文件，意味着必须等到全部JavaScript代码都被下载、解析和执行完成以后，才能开始呈现页面的内容（浏览器在遇到<body>标签时才开始呈现内容）。对于那些需要很多JavaScript代码的页面来说，这无疑会导致浏览器在呈现页面时出现明显的延迟，而延迟期间的浏览器窗口中将是一片空白。为了避免这个问题，现代Web应用程序一般都把全部JavaScript引用放在<body>元素中页面内容的后面，如下例所示：
 
@@ -109,13 +109,13 @@
         <script type="text/javascript" src="example2.js"></script>
     </body>
 </html>
-```html
+```
 
 这样，在解析包含的JavaScript代码之前，页面的内容将完全呈现在浏览器中。而用户也会因为浏览器窗口空白页面的时间缩短而感到打开页面的速度加快了。
 
 ### 2.1.2 延迟脚本
 
-HTML 4.01为script标签定义了defer属性。这个属性的用途是表明脚本在执行时不会影响页面的构造。也就是说，脚本会被延迟到整个页面解析完毕后再运行。因此，在元素script中设置defer属性，相当于告诉浏览器立即下载，但延迟执行。
+HTML 4.01为<script>标签定义了defer属性。这个属性的用途是表明脚本在执行时不会影响页面的构造。也就是说，脚本会被延迟到整个页面解析完毕后再运行。因此，在元素<script>中设置defer属性，相当于告诉浏览器立即下载，但延迟执行。
 
 ```html
 <!DOCTYPE html>
@@ -129,7 +129,7 @@ HTML 4.01为script标签定义了defer属性。这个属性的用途是表明脚
         <script type="text/javascript" defer="defer" src="example2.js"></script>
     </body>
 </html>
-```html
+```
 
 
 
