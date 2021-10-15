@@ -111,5 +111,27 @@
 </html>
 ```html
 
+这样，在解析包含的JavaScript代码之前，页面的内容将完全呈现在浏览器中。而用户也会因为浏览器窗口空白页面的时间缩短而感到打开页面的速度加快了。
+
+### 2.1.2 延迟脚本
+
+HTML 4.01为<script>标签定义了defer属性。这个属性的用途是表明脚本在执行时不会影响页面的构造。也就是说，脚本会被延迟到整个页面解析完毕后再运行。因此，在元素<script>中设置defer属性，相当于告诉浏览器立即下载，但延迟执行。
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example HTML Page</title>
+    </head>
+    <body>
+        <!-- 这里放内容 -->
+        <script type="text/javascript" defer="defer" src="example1.js"></script>
+        <script type="text/javascript" defer="defer" src="example2.js"></script>
+    </body>
+</html>
+```html
+
+
+
 
 
