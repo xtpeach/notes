@@ -77,9 +77,39 @@
 
 无论如何包含代码，只要不存在defer和async属性，浏览器都会按照<script>元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个<script>元素包含的代码解析完成后，第二个<script>包含的代码才会被解析，然后才是第三个、第四个……
 
+### 2.1.1 标签的位置
 
+按照传统的做法，所有<script>元素都应该放在页面的<head>元素中，例如：
 
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example HTML Page</title>
+        <script type="text/javascript" src="example1.js"></script>
+        <script type="text/javascript" src="example2.js"></script>
+    </head>
+    <body>
+        <!-- 这里放内容 -->
+    </body>
+</html>
+```html
 
+这种做法的目的就是把所有外部文件（包括CSS文件和JavaScript文件）的引用都放在相同的地方。可是，在文档的<head>元素中包含所有JavaScript文件，意味着必须等到全部JavaScript代码都被下载、解析和执行完成以后，才能开始呈现页面的内容（浏览器在遇到<body>标签时才开始呈现内容）。对于那些需要很多JavaScript代码的页面来说，这无疑会导致浏览器在呈现页面时出现明显的延迟，而延迟期间的浏览器窗口中将是一片空白。为了避免这个问题，现代Web应用程序一般都把全部JavaScript引用放在<body>元素中页面内容的后面，如下例所示：
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example HTML Page</title>
+    </head>
+    <body>
+        <!-- 这里放内容 -->
+        <script type="text/javascript" src="example1.js"></script>
+        <script type="text/javascript" src="example2.js"></script>
+    </body>
+</html>
+```html
 
 
 
